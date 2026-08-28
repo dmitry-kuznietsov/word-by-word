@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Статичная демо-версия Слово — читалки для изучения английского." />
+  <title>Слово — демо читалки</title>
+  <style>
+    :root {
+      --color-sand:#e5b78e;
+      --color-coral:#c96667;
+      --color-forest:#345244;
+      --color-graphite:#40414f;
+      --color-canvas:#fbfaf7;
+      --color-soft:#f3e5d6;
+      --color-white:#fff;
+      --color-word-hover:rgb(70 152 124);
+      --color-border:rgb(64 65 79 / 18%);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--color-canvas);color:var(--color-graphite);font-family:Arial,Helvetica,sans-serif} button,a{font:inherit} a{color:inherit;text-decoration:none} button{color:inherit}
+    .header{height:76px;display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:auto;padding:0 24px}.brand{display:flex;align-items:center;gap:9px;font-size:23px;font-weight:800;letter-spacing:-1px}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--color-graphite);color:white;font:19px Georgia,serif}.nav{display:flex;gap:30px;font-size:13px}.nav a:hover{opacity:.55}.pill{font-size:11px;font-weight:bold;letter-spacing:1px;border:1px solid var(--color-graphite);padding:9px 12px}
+    .hero{min-height:560px;background:var(--color-soft);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}.hero-copy{padding:85px 6vw max(80px,7vw);max-width:690px;margin-left:auto}.eyebrow,.kicker{font-size:10px;letter-spacing:1.8px;font-weight:800}.eyebrow{display:flex;gap:9px;align-items:center;margin-bottom:30px}.eyebrow:before{content:"";width:20px;height:2px;background:currentColor}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;margin:0;letter-spacing:-2px}h1{font-size:clamp(48px,6vw,76px);line-height:.97}h1 em,h2 em{color:var(--color-forest);font-style:italic}.hero-copy p{color:#62636d;max-width:440px;line-height:1.7;font-size:16px;margin:27px 0 30px}.button{border:0;background:var(--color-coral);color:white;padding:15px 20px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:var(--color-graphite)}.hero-visual{background:var(--color-forest);position:relative;display:grid;place-items:center;border-radius:0 0 0 100px;overflow:hidden}.rings,.rings:after{position:absolute;border:1px solid rgb(255 255 255 / 16%);border-radius:50%;width:600px;height:600px;content:""}.rings:after{width:410px;height:410px;left:95px;top:95px}.book{position:relative;background:#fcfbf7;width:min(430px,76%);min-height:420px;padding:54px 47px;transform:rotate(-3deg);box-shadow:0 30px 60px rgb(0 0 0 / 25%);z-index:1}.book small{font-size:9px;letter-spacing:1.7px;font-weight:bold}.book h2{font-size:43px;line-height:1;margin:15px 0 35px}.book p{font:19px/1.8 Georgia,serif}.book mark{background:var(--color-coral);color:white;padding:1px 4px}.tip{position:absolute;right:-38px;bottom:52px;width:220px;background:white;padding:16px;box-shadow:0 12px 28px rgb(0 0 0 / 18%);transform:rotate(4deg)}.tip small{font-size:9px;color:#777}.tip b{display:block;font:19px Georgia,serif;margin:5px 0}.tip span{font-size:10px;color:#6c6d72}.tag{position:absolute;left:3%;top:16%;z-index:2;background:var(--color-coral);color:white;padding:14px 18px;transform:rotate(-7deg);box-shadow:0 12px 24px rgb(0 0 0 / 18%)}.tag small{display:block;font-size:8px;letter-spacing:1.4px}.tag b{display:block;font:26px Georgia,serif;margin:6px 0 2px}.tag span{font-size:11px}
+    .ticker{background:var(--color-coral);color:white;display:flex;justify-content:center;gap:28px;overflow:hidden;white-space:nowrap;padding:20px;font-size:10px;font-weight:bold;letter-spacing:1.5px}.ticker i{font-style:normal;color:var(--color-sand)}.section{max-width:1180px;margin:auto;padding:100px 24px}.heading{display:flex;justify-content:space-between;gap:60px;align-items:end;margin-bottom:50px}.heading h2,.reader-copy h2,.cta h2{font-size:clamp(39px,4.5vw,62px);line-height:1.04;margin-top:15px}.heading p{margin:0;max-width:350px;color:#64656c;line-height:1.7;font-size:14px}.steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--color-border)}.step{padding:27px;min-height:275px;border-right:1px solid var(--color-border);position:relative}.step:last-child{border:0}.step:nth-child(2){background:var(--color-forest);color:white}.number{position:absolute;right:24px;top:22px;font-size:10px;opacity:.6}.icon{width:58px;height:58px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;font:20px Georgia,serif;margin:16px 0 65px}.step h3{font:22px Arial,sans-serif;font-weight:700;letter-spacing:-.5px;margin-bottom:10px}.step p{max-width:255px;font-size:13px;line-height:1.65;opacity:.75}
+    .reader{background:var(--color-soft);display:grid;grid-template-columns:340px minmax(430px,720px);gap:100px;justify-content:center;align-items:center;padding:110px 24px}.reader-copy p{color:#65666b;line-height:1.7;font-size:15px;margin:24px 0}.notice{border-left:3px solid var(--color-coral);padding:11px 13px;color:#65666b;font-size:12px;line-height:1.5;background:rgb(255 255 255 / 52%)}.reader-card{background:white;border:1px solid #d7d2c8;box-shadow:0 25px 55px rgb(64 65 79 / 12%)}.reader-head{padding:19px 25px;border-bottom:1px solid #e8e3da;display:flex;justify-content:space-between;font-size:11px}.level{background:var(--color-coral);color:white;padding:5px 7px;font-size:10px;font-weight:bold;margin-right:10px}.bar{height:3px;background:#e7e3dc}.bar i{display:block;height:3px;width:38%;background:var(--color-forest)}.story{position:relative;min-height:410px;padding:52px 65px 92px}.chapter{font-size:9px;letter-spacing:1.8px;font-weight:bold}.story h3{font-size:36px;line-height:1.08;margin:10px 0 26px}.story p{font:20px/1.85 Georgia,serif;margin:0 0 15px}.word{border:0;border-bottom:1px dotted #555;background:transparent;padding:0 2px;cursor:pointer;font:inherit;transition:background .13s,color .13s}.word:hover{background:var(--color-word-hover);color:white;border-bottom-color:transparent}.word.selected{background:var(--color-coral);color:white;border-bottom-color:transparent}.translation{position:absolute;right:42px;top:164px;width:235px;background:var(--color-graphite);color:white;padding:16px 17px;box-shadow:0 15px 26px rgb(0 0 0 / 20%)}.translation small{font-size:9px;letter-spacing:1px;color:#c3c4ca}.translation b{display:block;font:20px Georgia,serif;margin:5px 0}.translation span{font-size:10px;color:#d8d8dc}.translation button{position:absolute;right:9px;top:6px;border:0;background:transparent;color:white;font-size:20px;cursor:pointer}.reader-foot{border-top:1px solid #e8e3da;text-align:center;padding:18px;font-size:10px;letter-spacing:1px;color:#85868b}
+    .cards{background:var(--color-forest);color:white;display:grid;grid-template-columns:1fr 1fr;gap:11%;align-items:center;padding:95px max(7vw,calc((100vw - 1120px)/2))}.card-stack{height:390px;position:relative}.flash{position:absolute;width:280px;height:350px;color:var(--color-graphite);background:var(--color-coral);padding:25px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 25px 45px rgb(0 0 0 / 25%)}.flash-back{left:25px;top:25px;background:var(--color-sand);transform:rotate(-9deg);font:43px Georgia,serif}.flash-back span{font:15px Arial;margin-top:12px}.flash-front{left:105px;transform:rotate(5deg)}.flash-front small{position:absolute;top:23px;font-size:8px;letter-spacing:1.5px}.flash-front b{font:58px Georgia,serif}.flash-front>span{font-size:12px;margin:6px 0 25px}.flash-front i{font:italic 19px Georgia,serif}.cards-copy .kicker{color:var(--color-sand)}.cards-copy h2{font-size:clamp(40px,4.3vw,60px);line-height:1.05;margin:16px 0 22px}.cards-copy p{max-width:420px;line-height:1.7;color:#d1d7d4;font-size:15px}.cta{text-align:center;background:var(--color-sand);padding:110px 20px}.cta p{color:#5f5551;font-size:15px;margin:23px 0 30px}.cta .button{background:var(--color-graphite)}.footer{padding:42px 24px;max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#6c6d74}.footer p{margin:0}
+    @media(max-width:840px){.nav{display:none}.hero{grid-template-columns:1fr}.hero-copy{margin:0;padding:70px 24px}.hero-visual{min-height:510px;border-radius:0}.reader{grid-template-columns:1fr;gap:48px}.cards{grid-template-columns:1fr;padding:75px 24px}.heading{flex-direction:column;align-items:start;gap:23px}.steps{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--color-border)}.card-stack{transform:scale(.9);transform-origin:left top;height:345px}}
+    @media(max-width:560px){h1{font-size:48px}.hero-visual{min-height:450px}.book{padding:42px 30px;min-height:370px}.book h2{font-size:34px}.book p{font-size:16px}.tip{right:-12px;bottom:30px}.tag{display:none}.ticker{justify-content:flex-start}.section{padding:75px 20px}.story{padding:40px 28px 104px}.story h3{font-size:30px}.story p{font-size:18px}.translation{left:28px;right:28px;top:auto;bottom:26px;width:auto}.footer{flex-direction:column;gap:15px;text-align:center}.reader{padding:75px 20px}.pill{display:none}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#top"><span class="brand-mark">С</span>слово</a>
+    <nav class="nav"><a href="#demo">Демо</a><a href="#cards">Словарь</a><a href="#about">О проекте</a></nav>
+    <span class="pill">СТАТИЧНАЯ ДЕМО</span>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">ЧИТАЙТЕ · ПОНИМАЙТЕ · ЗАПОМИНАЙТЕ</div>
+        <h1>Английский,<br>который читается<br><em>как любимая книга.</em></h1>
+        <p>Открывайте тексты, переводите незнакомые слова в контексте и собирайте личный словарь.</p>
+        <a class="button" href="#demo">Попробовать демо&nbsp; →</a>
+      </div>
+      <div class="hero-visual">
+        <div class="rings"></div><div class="tag"><small>СОХРАНЕНО</small><b>wander</b><span>бродить</span></div>
+        <div class="book"><small>ГЛАВА ПЕРВАЯ</small><h2>The Path<br>Through the Pines</h2><p>The morning air was <mark>crisp</mark> and clear, carrying the scent of pine.</p><div class="tip"><small>ПРИЛАГАТЕЛЬНОЕ</small><b>свежий, бодрящий</b><span>“the morning air was crisp”</span></div></div>
+      </div>
+    </section>
+    <div class="ticker"><span>АНГЛИЙСКИЙ ↔ РУССКИЙ</span><i>✦</i><span>ПЕРЕВОД В ОДИН КЛИК</span><i>✦</i><span>ЛИЧНЫЙ СЛОВАРЬ</span><i>✦</i><span>ДЕМО БЕЗ РЕГИСТРАЦИИ</span></div>
+
+    <section class="section" id="about">
+      <div class="heading"><div><span class="kicker">КАК ЭТО РАБОТАЕТ</span><h2>Три шага<br>к свободному чтению</h2></div><p>Не отвлекайтесь на отдельный словарь: перевод открывается прямо в тексте.</p></div>
+      <div class="steps"><article class="step"><span class="number">01</span><div class="icon">Aa</div><h3>Откройте текст</h3><p>Выберите рассказ или начните с короткого отрывка.</p></article><article class="step"><span class="number">02</span><div class="icon">↖</div><h3>Нажмите на слово</h3><p>Сразу увидите перевод в контексте, не покидая страницу.</p></article><article class="step"><span class="number">03</span><div class="icon">✓</div><h3>Повторите позже</h3><p>Новые слова превращаются в карточки для повторения.</p></article></div>
+    </section>
+
+    <section class="reader" id="demo">
+      <div class="reader-copy"><span class="kicker">ИНТЕРАКТИВНОЕ ДЕМО</span><h2>Смысл всегда<br>под рукой</h2><p>Нажмите на подчёркнутое слово. При наведении слово подсвечивается зелёным; двойной клик закрывает перевод.</p><div class="notice">Это статичная версия для GitHub Pages. Загрузка книг и сохранение библиотеки доступны только в полной версии.</div></div>
+      <div class="reader-card"><div class="reader-head"><span><b class="level">A2</b> Тихое утро</span><span>3 / 8 страниц</span></div><div class="bar"><i></i></div><div class="story"><span class="chapter">ГЛАВА ПЕРВАЯ</span><h3>The Path Through the Pines</h3><p>The <button class="word" data-en="morning" data-ru="утро">morning</button> air was <button class="word" data-en="crisp" data-ru="свежий, бодрящий">crisp</button> and clear, carrying the <button class="word" data-en="scent" data-ru="аромат">scent</button> of <button class="word" data-en="pine" data-ru="сосна">pine</button> from the hills.</p><p>Everything felt possible at the beginning of a new <button class="word" data-en="journey" data-ru="путешествие">journey</button>.</p><div class="translation" hidden><button aria-label="Закрыть перевод">×</button><small></small><b></b><span></span></div></div><div class="reader-foot">КЛИК — ПЕРЕВОД · ДВОЙНОЙ КЛИК — ЗАКРЫТЬ</div></div>
+    </section>
+
+    <section class="cards" id="cards"><div class="card-stack"><div class="flash flash-back">pine<span>сосна</span></div><div class="flash flash-front"><small>СЛОВО 12 ИЗ 20</small><b>crisp</b><span>/krɪsp/</span><i>свежий, бодрящий</i></div></div><div class="cards-copy"><span class="kicker">ЛИЧНЫЙ СЛОВАРЬ</span><h2>Каждое новое слово становится знакомым</h2><p>В полной версии слова из текстов автоматически превращаются в карточки с исходным контекстом.</p></div></section>
+
+    <section class="cta"><span class="kicker">ПОЛНАЯ ВЕРСИЯ</span><h2>Откройте текст.<br><em>Откройте язык.</em></h2><p>Эта демо-страница работает без сервера и подходит для GitHub Pages.</p><a class="button" href="#demo">Вернуться к демо&nbsp; ↑</a></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#top"><span class="brand-mark">С</span>слово</a><p>Статичная демо-версия для GitHub Pages · 2026</p></footer>
+  <script>
+    const card=document.querySelector('.translation');
+    document.querySelectorAll('.word').forEach(word=>{
+      word.addEventListener('click',()=>{
+        document.querySelectorAll('.word').forEach(item=>item.classList.remove('selected'));
+        word.classList.add('selected');
+        card.querySelector('small').textContent=word.dataset.en+' · перевод';
+        card.querySelector('b').textContent=word.dataset.ru;
+        card.querySelector('span').textContent='“'+word.dataset.en+'”';
+        card.hidden=false;
+      });
+      word.addEventListener('dblclick',()=>{card.hidden=true;word.classList.remove('selected');});
+    });
+    card.querySelector('button').addEventListener('click',()=>{card.hidden=true;document.querySelectorAll('.word').forEach(item=>item.classList.remove('selected'));});
+  </script>
+</body>
+</html>
