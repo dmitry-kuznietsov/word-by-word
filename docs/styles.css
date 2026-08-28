@@ -80,3 +80,38 @@
     #reader-text{max-width:none}
     @media(max-width:900px){.reader{padding:84px 28px}.reader-copy{margin-bottom:26px}.reader-copy p{max-width:none}}
     @media(max-width:560px){.reader{padding:72px 20px}.reader-copy{margin-bottom:22px}.story{padding:38px 24px 76px}#reader-text{max-width:none}}
+
+    /* Словник: коротка добірка реальних локальних перекладів. */
+    .vocabulary{overflow:hidden;border-top:1px solid var(--line);background:var(--canvas)}
+    .vocabulary-inner{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(470px,1.18fr);gap:clamp(44px,8vw,108px);align-items:center;max-width:1200px;margin:auto;padding:104px 24px}
+    .vocabulary-copy h2{max-width:510px;margin:14px 0 22px;font-size:clamp(40px,4.8vw,62px);line-height:1.03}
+    .vocabulary-copy h2 em{display:block}
+    .vocabulary-copy>p{max-width:450px;margin:0;color:#65666b;font-size:15px;line-height:1.72}
+    .vocabulary-note{display:grid;grid-template-columns:35px 1fr;gap:12px;align-items:start;max-width:450px;margin:29px 0 24px;padding:16px 17px;border-left:3px solid var(--coral);background:var(--soft)}
+    .vocabulary-note>span{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--coral);color:#fff;font:18px/1 Georgia,serif}
+    .vocabulary-note p{margin:0;color:#5e5f65;font-size:12px;line-height:1.58}
+    .vocabulary-note strong{color:var(--graphite)}
+    .vocabulary-link{display:inline-flex;align-items:center;gap:11px;padding-bottom:4px;border-bottom:2px solid var(--coral);font-size:13px;font-weight:800}
+    .vocabulary-link span{font-size:19px;line-height:.8;transition:transform .2s ease}
+    .vocabulary-link:hover span,.vocabulary-link:focus-visible span{transform:translateX(5px)}
+    .vocabulary-link:focus-visible{outline:2px solid var(--forest);outline-offset:5px}
+    .vocabulary-board{position:relative;overflow:hidden;padding:0 27px 27px;background:var(--graphite);color:#fff;box-shadow:20px 20px 0 var(--forest)}
+    .vocabulary-board:before,.vocabulary-board:after{position:absolute;border:1px solid rgb(255 255 255 / 12%);border-radius:50%;content:"";pointer-events:none}
+    .vocabulary-board:before{right:-105px;bottom:-120px;width:300px;height:300px}
+    .vocabulary-board:after{right:38px;bottom:58px;width:130px;height:130px}
+    .vocabulary-board-head{position:relative;z-index:1;display:flex;justify-content:space-between;gap:20px;padding:22px 0 18px;border-bottom:1px solid rgb(255 255 255 / 18%);font-size:9px;font-weight:800;letter-spacing:1.35px}
+    .vocabulary-board-head span:last-child{color:#d4d5dc;text-align:right}
+    .vocabulary-list{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-right:1px solid rgb(255 255 255 / 16%);border-bottom:1px solid rgb(255 255 255 / 16%)}
+    .vocab-word,.vocabulary-featured{position:relative;min-height:92px;padding:17px 16px;border-top:1px solid rgb(255 255 255 / 16%);border-left:1px solid rgb(255 255 255 / 16%)}
+    .vocab-word{display:flex;flex-direction:column;justify-content:center;gap:6px;background:rgb(255 255 255 / 2%);transition:background .2s ease,transform .2s ease}
+    .vocab-word:hover{z-index:2;background:var(--forest);transform:translate(-3px,-3px)}
+    .vocab-word span{font:italic 18px/1.05 Georgia,serif}
+    .vocab-word b{color:#d8d8dc;font-size:11px;line-height:1.38}
+    .vocabulary-featured{grid-column:1/-1;min-height:136px;overflow:hidden;padding:20px 22px;background:var(--coral)}
+    .vocabulary-featured>span{display:block;font-size:9px;font-weight:800;letter-spacing:1.35px}
+    .vocabulary-featured strong,.vocabulary-featured b{position:relative;z-index:1;display:block}
+    .vocabulary-featured strong{margin-top:12px;font:32px/1 Georgia,serif}
+    .vocabulary-featured b{margin-top:5px;font-size:12px}
+    .vocabulary-featured i{position:absolute;right:25px;bottom:15px;color:rgb(255 255 255 / 55%);font:64px/1 Georgia,serif}
+    @media(max-width:900px){.vocabulary-inner{grid-template-columns:1fr;gap:44px;padding:84px 28px}.vocabulary-copy h2{max-width:720px}.vocabulary-copy>p,.vocabulary-note{max-width:760px}.vocabulary-board{max-width:760px;width:100%;box-shadow:14px 14px 0 var(--forest)}}
+    @media(max-width:560px){.vocabulary-inner{gap:36px;padding:72px 20px}.vocabulary-copy h2{font-size:42px;letter-spacing:-.6px}.vocabulary-note{grid-template-columns:31px 1fr;margin-top:24px;padding:14px}.vocabulary-board{padding:0 14px 14px;box-shadow:9px 9px 0 var(--forest)}.vocabulary-board-head{gap:10px;padding:18px 2px 15px;line-height:1.35}.vocabulary-list{grid-template-columns:repeat(2,minmax(0,1fr))}.vocab-word{min-height:84px;padding:13px 11px}.vocab-word span{font-size:17px}.vocab-word b{font-size:10px}.vocabulary-featured{min-height:124px;padding:18px}.vocabulary-featured strong{font-size:30px}.vocabulary-featured i{right:18px;font-size:56px}}
