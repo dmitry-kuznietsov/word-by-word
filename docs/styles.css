@@ -115,3 +115,53 @@
     .vocabulary-featured i{position:absolute;right:25px;bottom:15px;color:rgb(255 255 255 / 55%);font:64px/1 Georgia,serif}
     @media(max-width:900px){.vocabulary-inner{grid-template-columns:1fr;gap:44px;padding:84px 28px}.vocabulary-copy h2{max-width:720px}.vocabulary-copy>p,.vocabulary-note{max-width:760px}.vocabulary-board{max-width:760px;width:100%;box-shadow:14px 14px 0 var(--forest)}}
     @media(max-width:560px){.vocabulary-inner{gap:36px;padding:72px 20px}.vocabulary-copy h2{font-size:42px;letter-spacing:-.6px}.vocabulary-note{grid-template-columns:31px 1fr;margin-top:24px;padding:14px}.vocabulary-board{padding:0 14px 14px;box-shadow:9px 9px 0 var(--forest)}.vocabulary-board-head{gap:10px;padding:18px 2px 15px;line-height:1.35}.vocabulary-list{grid-template-columns:repeat(2,minmax(0,1fr))}.vocab-word{min-height:84px;padding:13px 11px}.vocab-word span{font-size:17px}.vocab-word b{font-size:10px}.vocabulary-featured{min-height:124px;padding:18px}.vocabulary-featured strong{font-size:30px}.vocabulary-featured i{right:18px;font-size:56px}}
+
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;clip-path:inset(50%)}
+    .dictionary-quick{border-bottom:1px solid var(--line);background:#fff}
+    .dictionary-quick-inner{display:grid;grid-template-columns:minmax(185px,.78fr) minmax(320px,1.35fr) auto;align-items:center;gap:28px;max-width:1200px;margin:auto;padding:18px 24px}
+    .dictionary-quick-copy{display:flex;align-items:center;gap:13px}
+    .dictionary-quick-copy .kicker{white-space:nowrap}
+    .dictionary-quick-copy p{margin:0;color:#686970;font-size:11px;line-height:1.4}
+    .dictionary-quick-field{display:flex;min-width:0;border:1px solid var(--graphite);background:var(--canvas);transition:border-color .18s ease,box-shadow .18s ease}
+    .dictionary-quick-field:focus-within{border-color:var(--forest);box-shadow:0 0 0 3px rgb(77 129 105 / 15%)}
+    #dictionary-quick-search{width:100%;min-width:0;border:0;outline:0;background:transparent;padding:11px 13px;color:var(--graphite);font:16px Georgia,serif}
+    #dictionary-quick-search::placeholder{color:#929298;opacity:1}
+    .dictionary-quick-field button{display:flex;align-items:center;justify-content:center;gap:8px;flex:0 0 auto;border:0;background:var(--coral);padding:0 16px;color:#fff;font-size:11px;font-weight:800;transition:background .18s ease}
+    .dictionary-quick-field button:hover,.dictionary-quick-field button:focus-visible{background:var(--forest);outline:0}
+    .dictionary-quick-field button span{font-size:17px;line-height:1}
+    .dictionary-quick-link{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border-bottom:1px solid var(--coral);padding-bottom:3px;font-size:11px;font-weight:800}
+    .dictionary-quick-link span{color:var(--coral);font-size:15px;line-height:1;transition:transform .18s ease}
+    .dictionary-quick-link:hover span,.dictionary-quick-link:focus-visible span{transform:translateY(3px)}
+    .dictionary-quick-link:focus-visible{outline:2px solid var(--forest);outline-offset:5px}
+    @media(max-width:900px){.dictionary-quick-inner{grid-template-columns:1fr auto;gap:14px 24px;padding:17px 28px}.dictionary-quick-copy{grid-column:1/-1}.dictionary-quick-field{min-width:0}}
+    @media(max-width:560px){.dictionary-quick-inner{grid-template-columns:1fr;gap:12px;padding:17px 20px}.dictionary-quick-copy{align-items:flex-start;flex-direction:column;gap:5px}.dictionary-quick-copy p{font-size:11px}.dictionary-quick-field{width:100%}.dictionary-quick-link{justify-self:start}}
+
+/* Повний словник: дані підставляються локально, без зовнішнього перекладача. */
+    .dictionary-browser{grid-column:1/-1;padding:34px;border:1px solid var(--line);background:#fff;box-shadow:0 18px 38px rgb(64 65 79 / 7%)}
+    .dictionary-browser-head{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:27px}
+    .dictionary-browser-head h3{margin-top:12px;font-size:clamp(29px,3vw,42px);line-height:1.05}
+    .dictionary-local-note{display:flex;align-items:flex-start;gap:8px;max-width:330px;margin:0;color:#65666b;font-size:12px;line-height:1.5}
+    .dictionary-local-note span{display:grid;place-items:center;flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:var(--forest);color:#fff;font-size:10px;font-weight:800}
+    .dictionary-search-label{display:block;margin-bottom:9px;font-size:10px;font-weight:800;letter-spacing:1.25px}
+    .dictionary-search-wrap{display:flex;align-items:center;gap:12px;padding:0 16px;border:1px solid var(--graphite);background:var(--canvas);transition:border-color .18s ease,box-shadow .18s ease}
+    .dictionary-search-wrap:focus-within{border-color:var(--forest);box-shadow:0 0 0 3px rgb(77 129 105 / 16%)}
+    .dictionary-search-wrap>span{font:25px/1 Georgia,serif;transform:rotate(-18deg)}
+    #dictionary-search{width:100%;min-width:0;border:0;outline:0;background:transparent;padding:16px 0;color:var(--graphite);font:18px Georgia,serif}
+    #dictionary-search::placeholder{color:#98989c;opacity:1}
+    .dictionary-controls{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:19px 0 16px}
+    .dictionary-controls>p{margin:0;color:#6c6d73;font-size:11px;white-space:nowrap}
+    .dictionary-controls>p strong{color:var(--graphite);font-size:14px}
+    .dictionary-letters{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:5px}
+    .dictionary-letter{display:grid;place-items:center;min-width:27px;height:27px;border:1px solid var(--line);background:#fff;color:#696a70;font-size:10px;font-weight:800;transition:color .16s ease,background .16s ease,border-color .16s ease}
+    .dictionary-letter:hover,.dictionary-letter:focus-visible,.dictionary-letter.is-active{border-color:var(--forest);background:var(--forest);color:#fff;outline:0}
+    .dictionary-results{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .dictionary-result{display:flex;min-height:93px;flex-direction:column;justify-content:center;gap:7px;padding:16px;border-top:1px solid var(--line);border-left:1px solid var(--line);background:#fff;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+    .dictionary-result:hover{position:relative;z-index:1;background:var(--soft);box-shadow:inset 0 -3px 0 var(--coral)}
+    .dictionary-en{font:italic 19px/1.08 Georgia,serif}
+    .dictionary-uk{color:#62636a;font-size:11px;line-height:1.42}
+    .dictionary-loading,.dictionary-empty{grid-column:1/-1;margin:0;padding:32px 16px;background:var(--canvas);color:#6b6c72;font:16px/1.5 Georgia,serif;text-align:center}
+    .dictionary-more{display:flex;align-items:center;justify-content:center;gap:11px;width:100%;margin-top:16px;border:0;background:var(--coral);padding:14px 18px;color:#fff;font-size:12px;font-weight:800;transition:background .18s ease,transform .18s ease}
+    .dictionary-more:hover,.dictionary-more:focus-visible{background:var(--forest);outline:0;transform:translateY(-2px)}
+    .dictionary-more span{font-size:18px;line-height:.8}.dictionary-more[hidden]{display:none}
+    @media(max-width:900px){.dictionary-browser{padding:28px}.dictionary-results{grid-template-columns:repeat(3,minmax(0,1fr))}.dictionary-browser-head{align-items:start;flex-direction:column;gap:14px}.dictionary-local-note{max-width:none}.dictionary-controls{align-items:flex-start;flex-direction:column}.dictionary-letters{justify-content:flex-start}}
+    @media(max-width:560px){.dictionary-browser{padding:20px 14px}.dictionary-browser-head{margin-bottom:22px}.dictionary-browser-head h3{font-size:31px;letter-spacing:-.6px}.dictionary-search-wrap{padding:0 12px}.dictionary-search-wrap>span{font-size:22px}#dictionary-search{padding:14px 0;font-size:17px}.dictionary-controls{gap:13px;margin:16px 0 13px}.dictionary-controls>p{white-space:normal}.dictionary-letters{gap:4px}.dictionary-letter{min-width:26px;height:26px}.dictionary-results{grid-template-columns:repeat(2,minmax(0,1fr))}.dictionary-result{min-height:84px;padding:13px}.dictionary-en{font-size:18px}.dictionary-uk{font-size:10px}.dictionary-loading,.dictionary-empty{padding:25px 13px;font-size:15px}}
