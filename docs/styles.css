@@ -165,3 +165,30 @@
     .dictionary-more span{font-size:18px;line-height:.8}.dictionary-more[hidden]{display:none}
     @media(max-width:900px){.dictionary-browser{padding:28px}.dictionary-results{grid-template-columns:repeat(3,minmax(0,1fr))}.dictionary-browser-head{align-items:start;flex-direction:column;gap:14px}.dictionary-local-note{max-width:none}.dictionary-controls{align-items:flex-start;flex-direction:column}.dictionary-letters{justify-content:flex-start}}
     @media(max-width:560px){.dictionary-browser{padding:20px 14px}.dictionary-browser-head{margin-bottom:22px}.dictionary-browser-head h3{font-size:31px;letter-spacing:-.6px}.dictionary-search-wrap{padding:0 12px}.dictionary-search-wrap>span{font-size:22px}#dictionary-search{padding:14px 0;font-size:17px}.dictionary-controls{gap:13px;margin:16px 0 13px}.dictionary-controls>p{white-space:normal}.dictionary-letters{gap:4px}.dictionary-letter{min-width:26px;height:26px}.dictionary-results{grid-template-columns:repeat(2,minmax(0,1fr))}.dictionary-result{min-height:84px;padding:13px}.dictionary-en{font-size:18px}.dictionary-uk{font-size:10px}.dictionary-loading,.dictionary-empty{padding:25px 13px;font-size:15px}}
+
+    /* Повний словник продовжує темну карткову вітрину. */
+    #vocabulary-board-label{color:#f3d8c1}
+    .vocabulary-featured{transition:background .3s ease}
+    .dictionary-browser{position:relative;overflow:hidden;border:0;background:var(--graphite);color:#fff;box-shadow:20px 20px 0 var(--forest)}
+    .dictionary-browser:before,.dictionary-browser:after{position:absolute;border:1px solid rgb(255 255 255 / 11%);border-radius:50%;content:"";pointer-events:none}
+    .dictionary-browser:before{top:-180px;right:-110px;width:370px;height:370px}
+    .dictionary-browser:after{right:92px;bottom:-118px;width:230px;height:230px}
+    .dictionary-browser>*{position:relative;z-index:1}
+    .dictionary-browser-head h3{color:#fff}
+    .dictionary-local-note{color:#d8d8dc}.dictionary-local-note span{background:var(--coral)}
+    .dictionary-search-label{color:#d8d8dc}
+    .dictionary-search-wrap{border-color:rgb(255 255 255 / 31%);background:rgb(255 255 255 / 5%)}
+    .dictionary-search-wrap:focus-within{border-color:#fff;box-shadow:0 0 0 3px rgb(255 255 255 / 14%)}
+    .dictionary-search-wrap>span{color:#f3d8c1}
+    #dictionary-search{color:#fff}#dictionary-search::placeholder{color:#bfc0c7}
+    .dictionary-controls>p{color:#d8d8dc}.dictionary-controls>p strong{color:#fff}
+    .dictionary-letter{border-color:rgb(255 255 255 / 21%);background:transparent;color:#e7e7eb}
+    .dictionary-letter:hover,.dictionary-letter:focus-visible,.dictionary-letter.is-active{border-color:var(--coral);background:var(--coral);color:#fff}
+    .dictionary-results{border-color:rgb(255 255 255 / 16%)}
+    .dictionary-result{border-color:rgb(255 255 255 / 16%);background:rgb(255 255 255 / 2%);color:#fff}
+    .dictionary-result:hover{z-index:2;background:var(--forest);box-shadow:inset 0 -3px 0 var(--coral);transform:translate(-3px,-3px)}
+    .dictionary-en{color:#fff}.dictionary-uk{color:#d8d8dc}
+    .dictionary-loading,.dictionary-empty{background:rgb(255 255 255 / 4%);color:#d8d8dc}
+    .dictionary-more{background:var(--coral)}.dictionary-more:hover,.dictionary-more:focus-visible{background:#fff;color:var(--graphite)}
+    @media(max-width:900px){.dictionary-browser{box-shadow:14px 14px 0 var(--forest)}}
+    @media(max-width:560px){.dictionary-browser{box-shadow:9px 9px 0 var(--forest)}}
