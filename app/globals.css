@@ -57,3 +57,7 @@
 .book-card:hover .book-open > small { color:var(--color-word-hover); }
 .library-note { max-width:290px; font-size:14px; line-height:1.6; color:#63655e; margin:0 0 5px; }
 .reader-text p { margin:0 0 1.1em; }
+.translation-rating { display:flex; align-items:center; gap:5px; margin-top:9px; padding-top:8px; border-top:1px solid rgb(255 255 255 / 18%); }
+.translation-rating small { margin-right:auto; color:#d0d1d5; font-size:9px; letter-spacing:0; }
+.translation-rating button { width:27px; height:25px; padding:0; border:1px solid rgb(255 255 255 / 35%); color:var(--color-white); font-size:12px; line-height:1; }
+.translation-rating button.active { background:var(--color-sand); border-color:var(--color-sand); color:var(--color-graphite); }
