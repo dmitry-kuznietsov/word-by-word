@@ -43,3 +43,21 @@
     @media(max-width:900px){.reader-mobile-guide{display:grid;gap:4px;margin:23px 0 18px;padding:15px 17px;border-left:3px solid var(--coral);background:rgb(255 255 255 / 58%)}.reader-mobile-guide b{font-size:9px;letter-spacing:1.3px}.reader-mobile-guide span{font-size:15px;font-weight:700}.reader-mobile-guide small{font-size:11px;line-height:1.4;color:#65666b}.reader-foot{display:none}.book-grid.accordion-library{display:block;border-top:1px solid var(--line)}.library-level{border-bottom:1px solid var(--line)}.library-level summary{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:74px;padding:18px 48px 18px 2px;cursor:pointer;list-style:none;font:700 20px/1.1 Arial,Helvetica,sans-serif}.library-level summary::-webkit-details-marker{display:none}.library-level summary::marker{content:""}.library-level summary span{font-size:11px;font-weight:700;letter-spacing:1px;color:#6b6c72}.library-level summary:after{position:absolute;right:8px;width:26px;height:26px;border:1px solid currentColor;border-radius:50%;color:var(--coral);content:"+";font:24px/23px Georgia,serif;text-align:center;transition:transform .2s ease}.library-level[open] summary:after{transform:rotate(45deg)}.level-books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:0 0 20px}.level-books .book{min-width:0}}
     @media(max-width:560px){.reader-mobile-guide{margin-top:18px}.library-level summary{min-height:68px;padding-left:0;font-size:18px}.level-books{grid-template-columns:1fr;gap:12px;padding-bottom:16px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+    /* Обкладинки: один набір тонких тематичних піктограм. */
+    .cover.coral:before,.cover.coral:after,.cover.graphite:before,.cover.graphite:after{border-color:rgb(255 255 255 / 48%)}
+    .cover i{display:grid;place-items:center;width:30px;height:30px;margin-top:14px;font:28px/1 Georgia,serif}
+
+    /* Блок власних книжок продовжує темну частину палітри. */
+    .books{background:var(--graphite);color:#fff}
+    .books-copy h2 em{color:var(--soft)}
+    .books-copy p{color:#d8d8dc}
+    .books .button{background:var(--coral);color:#fff}
+    .books .button:hover,.books .button:focus-visible{background:var(--forest);box-shadow:0 13px 26px rgb(77 129 105 / 32%)}
+    .books .placeholder{border-color:rgb(255 255 255 / 34%);background:rgb(255 255 255 / 8%);color:#fff}
+    .books .placeholder b{background:var(--coral)}
+    .books .placeholder small{color:#d8d8dc}
+    .books .placeholder button{color:#fff}
+
+    @media(max-width:900px){.reader-mobile-guide span,.reader-mobile-guide small{font-size:15px;font-weight:600}}
+    #reader-genre{font-size:13px;font-weight:700;letter-spacing:.1px}
