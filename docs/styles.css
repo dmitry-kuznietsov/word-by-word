@@ -68,8 +68,8 @@
     @media(max-width:900px){.library-level summary::after{top:50%;right:8px;display:block;width:26px;height:26px;box-sizing:border-box;border:1px solid currentColor;border-radius:50%;color:var(--coral);content:"";transform:translateY(-50%)}.library-level summary::before{position:absolute;top:50%;right:16px;z-index:1;width:10px;height:10px;content:"";background:linear-gradient(currentColor,currentColor) center/10px 2px no-repeat,linear-gradient(currentColor,currentColor) center/2px 10px no-repeat;color:var(--coral);pointer-events:none;transform:translateY(-50%);transition:transform .2s ease}.library-level[open] summary::after{transform:translateY(-50%)}.library-level[open] summary::before{transform:translateY(-50%) rotate(45deg)}}
     @media(max-width:560px){.tip{left:0;transform:translateX(0) rotate(0)}}
 
-    /* Читалка: заголовок сверху, поле чтения во всю ширину контента. */
-    .reader{display:block;padding:78px 8px}
+    /* Читалка: заголовок сверху, в общем контейнере страницы. */
+    .reader{display:block;padding:78px max(24px,calc((100vw - 1152px)/2))}
     .reader-copy,.reader-card{width:100%;margin-inline:auto}
     .reader-copy{margin-bottom:24px}
     .reader-copy h2{margin:11px 0 15px}
