@@ -61,3 +61,7 @@
 
     @media(max-width:900px){.reader-mobile-guide span,.reader-mobile-guide small{font-size:15px;font-weight:600}}
     #reader-genre{font-size:13px;font-weight:700;letter-spacing:.1px}
+
+    /* Стійке вирівнювання мобільних елементів. */
+    @media(max-width:900px){.library-level summary:after{top:50%;display:grid;place-items:center;font-size:22px;line-height:1;transform:translateY(-50%)}.library-level[open] summary:after{transform:translateY(-50%) rotate(45deg)}}
+    @media(max-width:560px){.tip{left:0;transform:translateX(0) rotate(0)}}
