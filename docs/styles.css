@@ -36,7 +36,7 @@
     @media(min-width:561px) and (max-width:900px){.hero-copy,.reader-copy,.books-copy{width:100%;max-width:none}.hero-copy p,.reader-copy p,.books-copy p,.heading p{max-width:none}.hero-copy h1 br,.heading h2 br,.reader-copy h2 br,.books-copy h2 br{display:none}}
     @media(max-width:900px){h1,h2{letter-spacing:-.6px}}
     .hero-next{padding-top:0}
-    .tip{background:var(--graphite)!important;color:#fff;border-top:3px solid var(--coral);box-shadow:0 15px 28px rgb(0 0 0 / 22%);backdrop-filter:none}
+    .tip{background:rgb(64 65 79 / 92%)!important;color:#fff;border-top:3px solid var(--coral);box-shadow:0 15px 28px rgb(0 0 0 / 22%);backdrop-filter:none}
     .tip small{font-size:9px;letter-spacing:1px;color:#c3c4ca}.tip b{margin:3px 23px 2px 0;font:18px Georgia,serif;line-height:1.16;color:#fff}.tip span{display:block;font-size:10px;line-height:1.35;color:#d8d8dc}
     @media(max-width:560px){.tip{backdrop-filter:blur(12px) saturate(1.12)}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
