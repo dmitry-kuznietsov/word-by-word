@@ -71,6 +71,171 @@ const storyExtensions: Record<string, string> = {
   "empty-chair": "The following week, the group placed a small notebook on the empty chair. Anyone could leave a first line there, and the quiet man wrote one too: There is still a story I want to tell.",
 };
 
+const strictBodies: Record<string, string[]> = {
+  "morning-walk": [
+    "Mia wakes up early on Saturday. The sun is up, but her street is still quiet. She looks out of the window and sees blue sky. It is a good morning for a walk.",
+    "She puts on her blue shoes and takes a small bottle of water. Her mum says, “Have a nice time.” Mia smiles and walks to the park near her home.",
+    "At the park, a brown dog runs after a yellow ball. A man throws the ball again and again. Mia sits on a bench and drinks some water.",
+    "She can see birds in a tall tree. She can hear the leaves move in the wind. Near the lake, two children feed small fish with bread.",
+    "After one hour, Mia walks home. She feels happy and tired. At home, she makes tea and tells her mum about the dog, the birds, and the lake. She smiles again."
+  ],
+  "new-classmate": [
+    "On Monday, a new girl comes to Leo’s class. Her name is Nora. She is from Spain. She has a small red bag and a book in her hand. Her family has a new home in this town. This is her first day there.",
+    "At first, Nora is quiet. She does not know the room, the teacher, or the other children. Leo says hello and shows her the classroom. He gives her a pen and a clean page.",
+    "Before lunch, Leo takes Nora to the library. Then he shows her the place for lunch and the school yard. Nora asks many simple questions.",
+    "At lunch, Leo and Nora sit at one table. They talk about music, cats, and their families. Nora likes the same song as Leo.",
+    "After school, Nora says, “Thank you for your help today.” Leo is happy. The next morning, he sees Nora at the door. They go to class together."
+  ],
+  "rainy-afternoon": [
+    "After school, it starts to rain. Sam takes off his wet coat and looks out of the window. He wants to play football, but the grass is very wet.",
+    "Sam feels sad. His sister Maya comes into the room with paper, colours, and an old box. The box is big and brown. She has an idea for a game.",
+    "They make small houses, roads, and trees from the paper. Sam makes a school. Maya makes a shop with a red door. They use a blue pen for the roads. Their city is on the floor.",
+    "Their cat comes into the room. It walks slowly through the paper streets. Sam laughs. The cat is very big in their little city.",
+    "Later, Mum makes hot tea and puts small cakes on a plate. The rain is still on the window, but Sam is happy. He wants to make more houses tomorrow. They are happy."
+  ],
+  "green-bicycle": [
+    "Every morning, Eva sees a green bicycle by the old train station. It has a brown basket, a small bell, and a clean white seat. Eva walks past it when she goes to school.",
+    "One day, there is a note on the basket. It says, “Please use this bike if you need it today.” There is no name on the note. Eva smiles and looks at the bike.",
+    "She needs bread for her mum, so she rides to the small shop near the park. She has no car today. The bike is fast, and the morning air is warm.",
+    "Eva puts fresh bread in the basket. Then she rides back to the station and puts the bicycle in the same place.",
+    "She leaves a new note with the bread bag. It says, “Thank you for the bike.” The next day, the bike is there again for someone else. She is happy."
+  ],
+  "market-list": [
+    "On Saturday morning, Dad gives Lina a small list. It says apples, carrots, bread, cheese, milk, and tea. Mum is at home, so Dad and Lina go alone. They walk to the market together.",
+    "The market is busy. Lina can see red apples, green vegetables, and yellow flowers. She can smell warm bread near the big door. People talk and laugh.",
+    "Dad buys the food and puts it in a big bag. Lina looks at the list after every stop. She says, “We have apples. We have carrots. We need milk.”",
+    "At the last shop, Lina sees a big cake. It is red and has white cream. She wants it, but Dad says they have cake at home. Lina laughs and takes the milk.",
+    "At home, they make soup and eat bread with cheese. Lina puts the list on the table. They have all the food, and Lina feels proud."
+  ],
+  "birthday-note": [
+    "Today is Ben’s birthday. He does not want a big party or many gifts. He wants a quiet day with his two best friends. They know Ben likes small things.",
+    "In the morning, he finds a small white note under his door. It says, “Meet us at the bridge at four.” There is no name on it.",
+    "Ben reads the note again. At four, he walks to the small bridge near the river. He can see his friends from far away. The sun is low and the water is bright.",
+    "They have a blue blanket, juice, fruit, and a small cake. One friend plays a birthday song on a phone. Ben is very happy.",
+    "They sit by the water and talk until the sky is dark. Before he goes home, Ben puts the note in his pocket. He wants to keep it for a long time. It is a good memory."
+  ],
+  "letter-from-london": [
+    "Dear Anna, I arrived in London three days ago with my aunt. We are staying in a small hotel near a busy street. Our room has two small beds and a clean table. The city is much bigger than our town.",
+    "Yesterday, we walked to a market by the river. There were old books, bright flowers, and food from many places. I bought a postcard for you.",
+    "In the afternoon, we crossed a long bridge. A man played the violin near the water. We stopped to listen, then we took photos of the city.",
+    "Tomorrow, we are going to see a play. My aunt says the theatre is old and beautiful. After the play, we will have dinner in a small restaurant.",
+    "I miss you and our class. I will come home on Friday. I hope we can meet next week, and I will show you all my pictures. I feel happy."
+  ],
+  "lost-recipe": [
+    "Every autumn, our family makes Grandma’s apple cake. It is sweet and warm, and we eat it after Sunday lunch. She makes it with red apples from the market. Grandma has a special recipe.",
+    "This year, nobody can find the recipe. My brother looks in the kitchen drawers. I search a box with old letters and cards. The box is under the old table.",
+    "Dad checks the shelf above the fridge. Mum looks in the book where she keeps phone numbers. We look in every room.",
+    "At last, I open a photo album. Between two old pictures, there is a yellow page. It has a little brown mark on it. The recipe is there, with Grandma’s small writing.",
+    "We make the cake together. The house soon smells of apples and cinnamon. Grandma smiles when she tastes it. She says it is as good as her cake. Everyone feels happy today."
+  ],
+  "friendly-dog": [
+    "Every afternoon, a brown dog waits outside the small shop near my house. It has a red collar, but there is no name on it. The dog has big brown eyes and a long tail.",
+    "The dog is Mrs Green’s dog. His name is Toby. Mrs Green lives in the next street. He waits by the door when she goes inside to buy milk, bread, and fruit.",
+    "People in the street know Toby. Children say hello to him. They touch his head and say, “Good dog.” He sits quietly and watches the cars. He never goes into the road.",
+    "One rainy afternoon, Mrs Green is late. Toby sits under the shop roof. The shop worker gives him a bowl of water.",
+    "At last, Mrs Green comes out with two bags. Toby jumps up and moves his tail. She thanks the worker, and they walk home together. The dog is happy."
+  ],
+  "saturday-museum": [
+    "On Saturday, Mila plans to stay at home and watch a film. Then her cousin calls and asks her to visit a small museum near the square. The weather is warm, so they do not take the bus.",
+    "They walk there after lunch. The first room has maps of the old town and small models of ships. Mila looks at every model. Her cousin reads the words under each one.",
+    "In the next room, there are paintings of the town one hundred years ago. Mila sees the same bridge, but there are no cars on it.",
+    "Her cousin likes a picture of a woman in a blue dress. Mila likes a woman who is reading by a window. They talk about the pictures.",
+    "Before they go home, Mila buys a postcard of the reading woman. She puts it above her desk. Now she wants to draw a picture too. They are happy."
+  ],
+  "blue-umbrella": [
+    "One afternoon, Nadia takes the bus home in heavy rain. She has a blue umbrella with a black handle. It has a small mark near the end. She uses it every day in bad weather.",
+    "When she gets to her building, she sees only her bag. The umbrella is not with her. She left it on the bus. Nadia feels sad because it is her favourite umbrella.",
+    "The next morning, Nadia goes to the bus office. A worker writes down the bus number and asks her to come back later. She writes her phone number on a piece of paper.",
+    "After school, Nadia returns to the office. Her umbrella is near the window. A small paper star is on the handle.",
+    "The worker says a child found it and wanted to make it happy. Nadia smiles. On her way home, she keeps the blue umbrella very close. She feels warm again."
+  ],
+  "garden-project": [
+    "Behind our building, there is an empty space. It has old boxes, broken chairs, and plastic bags. The space is behind a wall and is not nice. Nobody sits or plays there.",
+    "One spring day, some neighbours meet outside. They want to make a small garden. They bring soil, seeds, water, and simple tools. Some people bring food for lunch.",
+    "On Saturday, children help to clean the ground. Adults make long boxes for the flowers. A man brings water in a big blue bottle. Everyone has dirty hands, but they are happy.",
+    "After a few weeks, green plants come up. There are red flowers, small herbs, and two benches. People can sit there after work.",
+    "Now the garden is a good place for the street. Neighbours talk while children play. We know more names than before, and we want to make it bigger next year. They are happy with it."
+  ],
+  "neighbour": [
+    "When Mr Hale moved into the flat above mine, most people in our building knew very little about him. He left early, returned late, and never stayed long in the hall.",
+    "One Saturday, the lift stopped just as I carried bags of food upstairs. Mr Hale was there with a box of books, so we waited together for help.",
+    "At first we spoke only about the broken lift. Then he noticed a guidebook in my bag and asked whether I planned a trip. He also showed me a small café near the old bridge.",
+    "He told me about Prague, where he once took the wrong tram and spent an afternoon walking beside the river. His story made us both laugh.",
+    "The lift soon worked again, but our conversation did not end there. After that day, we often shared news in the hall and sometimes helped each other with shopping. They were friendly."
+  ],
+  "train-to-sea": [
+    "Elena booked a train ticket to the coast after a busy month at work. She wanted a short break, fresh air, and time away from her phone.",
+    "The train left before sunrise. Across from her, an older man drew fields, small stations, and the first light in a notebook.",
+    "He said he travelled this route every spring, but he was returning home after visiting his daughter. Elena asked about the places on his page.",
+    "They talked quietly about favourite journeys, missed trains, and towns they hoped to see one day. The hours passed more quickly than Elena expected.",
+    "Before leaving, he showed her a small beach near the station and marked it on her map. He wished her a pleasant day. When the train reached the sea, she thanked him and stepped onto the platform. The cold wind and salty smell made her feel calm and ready to explore. She smiled."
+  ],
+  "open-window": [
+    "Every evening, I saw a warm light in the flat opposite my kitchen. A woman sat by an open window and wrote in a notebook.",
+    "I often wondered what she wrote, but I never asked. We only smiled when we met near the letter boxes downstairs. She explained that she wrote after work because the quiet room helped her think. I told her about the books I enjoyed.",
+    "One windy night, a page flew from her window and landed on my balcony. I picked it up before the rain reached it.",
+    "It was a short poem about a late train and a person who missed home. The words sounded very kind. I placed the page in an envelope with a note.",
+    "The next morning, she thanked me and gave me a new page to read. After that, we exchanged small poems and talked about writing over tea. They smiled again."
+  ],
+  "old-camera": [
+    "While he cleaned the attic, Amir found his grandfather's old camera in a wooden case. It was heavy, dusty, and still had film inside.",
+    "His grandfather smiled when he saw it. He said that it belonged to him when he was young. He took many family pictures with it.",
+    "On Sunday, he showed Amir how to hold it steady, choose a view, and wait before pressing the button. Amir liked the slow process.",
+    "They walked through the market and took pictures of a flower stall, an old bicycle, and a cat asleep near a door.",
+    "A week later, they collected the photographs from a small shop. Some were not clear, but they laughed at every mistake and kept the best ones. Amir put one picture of his grandfather by his desk at home, and it reminded him of their day. They gave one photograph to his grandmother. They laughed again."
+  ],
+  "quiet-cafe": [
+    "A small café opened beside the station, but few people noticed it at first. It had plain tables, soft lights, and no loud music.",
+    "Rosa, the owner, wanted to make a place where people could rest between work and home. She placed second-hand books beside the door.",
+    "She wrote a simple sign: Stay as long as you need. Some customers came for coffee, while others brought laptops or notebooks.",
+    "After several weeks, students began to meet there after class. People who worked from home chose a table near the window. On Friday evenings, a local musician played gentle songs for an hour. Visitors listened, spoke softly, and did not hurry away.",
+    "Rosa learned their names and asked about their days. The café stayed quiet, but it became a friendly part of the neighbourhood for everyone there, including people who sometimes felt lonely after work. It gave people a quiet place."
+  ],
+  "first-hike": [
+    "I joined the hike because my friends said the path was easy. They did not mention the long hill near the beginning. I brought water, a jacket, and a lunch box.",
+    "After twenty minutes, I felt tired and wanted to stop. A guide named Clara walked beside me and asked me to breathe slowly. The others waited at each turn and gave me time.",
+    "She pointed out small flowers, birds above the trees, and a stream below us. Looking at these things helped me forget my tired legs.",
+    "At the top, our group ate sandwiches and watched clouds move across the valley. Everyone was quiet for a few minutes. The view seemed worth the effort.",
+    "On the way down, I felt stronger than before. I still found the hill difficult, but I planned another walk for the following month. I wanted to see another view. The next walk felt good."
+  ],
+  "small-library": [
+    "The smallest library in the city stood between a repair shop and a bakery, almost hidden by a chestnut tree. Its rooms were narrow, its shelves were old, and the heating often failed in winter.",
+    "However, the library did more than lend books. Students prepared for exams beside retired engineers, parents found quiet time with their children, and the librarian greeted most visitors by name. For many people, it was a place to think without being expected to buy anything.",
+    "When the council announced plans to close it, the neighbourhood organised a reading festival. Local writers came, children read short stories aloud, and shop owners gave food for the event. The protest was calm, but it showed how strongly people valued the building.",
+    "The council finally agreed to keep the library open for another year. The decision did not solve every problem, yet it made one point clear: a small public space can make a large city feel less distant."
+  ],
+  "useful-mistake": [
+    "During a presentation, Daniel accidentally displayed an unfinished chart. A group of numbers formed an unusual pattern, although he had planned to hide the slide until it was checked.",
+    "Embarrassed, he tried to move on. Then a colleague asked whether the pattern might explain why some customers stopped using the service. Instead of dismissing the question, the team decided to examine the data.",
+    "Over the next week, they compared comments, orders, and support requests. They discovered that a recent change had confused people who used the service on small screens. The mistake had exposed a problem that normal reports had missed.",
+    "Daniel later used the chart in a meeting about the project. He explained that errors should not be celebrated, but they can be useful if a team reacts with curiosity rather than blame. The group changed its review process as a result. It also encouraged them to discuss early mistakes before they became expensive."
+  ],
+  "last-bus": [
+    "After a day of delayed flights, Maria boarded the last bus from the airport. It was almost empty, and she welcomed the silence after hours of announcements and crowded waiting areas.",
+    "At the next stop, an elderly man entered with a heavy suitcase. He asked the driver for a district that the bus no longer served at night. He looked tired and was clearly unsure how he would get home.",
+    "The driver explained the situation, then asked the other passengers whether they minded a short change of route. Maria expected complaints, since everyone had their own reasons for being late. Instead, several people said yes at once.",
+    "The detour added only ten minutes, but the man was left near his street. When Maria finally got off, the driver wished her good night and two passengers waved. The journey reminded her that public transport can become personal when people make room for one another."
+  ],
+  "map-of-voices": [
+    "For her university project, Irina recorded the everyday sounds of her neighbourhood: shutters opening, children in a courtyard, a tram turning at the corner, and voices from small shops.",
+    "Her professor asked why she was not making a traditional map. Irina replied that streets and buildings could show where people lived, but not what made the area feel familiar to them.",
+    "She invited residents to choose a place and share a short memory. Visitors could then click on a street and hear a shop bell, an old song, or a story about the first snow.",
+    "Some people thought the project was too personal to be useful. Yet Irina argued that a map does not only give directions; it can also help us notice whose experiences shape a place. By the end of the exhibition, many visitors said they listened to their own streets more carefully. The project also encouraged local people to contribute recordings after the exhibition closed."
+  ],
+  "repair-workshop": [
+    "The repair workshop remained open on a street where most small shops had become cafes or phone stores. Its owner, Pavel, repaired radios, clocks, lamps, and other objects that seemed too old to matter.",
+    "People sometimes asked why he fixed things that could be replaced for less money. Pavel replied that the price was not the only question. A familiar object could hold a memory, and a repair could prevent unnecessary waste.",
+    "After school, several teenagers began visiting to watch him work. At first, they only wanted to see the tools. Gradually, they learned to test a wire, clean a small part, and follow instructions without rushing.",
+    "The workshop did not promise that every object could be saved. However, Pavel believed it offered a useful habit: before throwing something away, look closely and ask whether it still has a purpose. This approach influenced the teenagers more than any formal lesson."
+  ],
+  "empty-chair": [
+    "In the community centre, one chair always remained empty during the weekly writing group. It stood near the window, although nobody was ever asked to sit there.",
+    "New members often wondered about it. The group leader explained that the chair was kept for a story that had not arrived yet. It was a simple idea, but it made the room feel open rather than complete.",
+    "One winter evening, a quiet man came in late and chose the empty chair. He listened for several weeks before reading a short piece about his brother, whom he had not spoken to for years.",
+    "The writing was not perfect, and he stopped twice to find the right words. Still, the group understood what he meant. For the others, his courage changed the meaning of the meeting. Afterwards, the chair no longer seemed empty; it represented the moment when someone decides that a difficult story deserves to be heard."
+  ]
+};
+
 const genreTranslations: Record<string, string> = {
   "Повседневность": "Повсякденність", "Школа": "Школа", "Дом": "Дім", "Город": "Місто", "Еда": "Їжа", "Дружба": "Дружба",
   "Путешествия": "Подорожі", "Семья": "Родина", "Рассказ": "Оповідання", "Искусство": "Мистецтво", "Природа": "Природа",
@@ -81,7 +246,7 @@ const readingTexts = baseReadingTexts.map((text) => ({
   ...text,
   genre: genreTranslations[text.genre] ?? text.genre,
   time: text.level === "A1" ? "5 хв" : text.level === "A2" ? "6 хв" : text.level === "B1" ? "8 хв" : "10 хв",
-  body: [...text.body, storyExtensions[text.id]],
+  body: strictBodies[text.id] ?? [...text.body, storyExtensions[text.id]],
 }));
 
 function cleanWord(value: string) { return value.replace(/(^[^\p{L}'’-]+|[^\p{L}'’-]+$)/gu, ""); }
