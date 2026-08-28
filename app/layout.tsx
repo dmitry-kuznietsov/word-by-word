@@ -18,12 +18,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
-  const title = "Слово — английский через чтение";
-  const description = "Читайте на английском, переводите слова одним касанием и загружайте свои книги — бесплатно и без ограничений.";
+  const title = "Word by Word — англійська через читання";
+  const description = "Читайте англійською, перекладайте слова одним дотиком і завантажуйте власні книжки — безкоштовно та без обмежень.";
   return {
     title,
     description,
-    icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+    icons: { icon: "/word-by-word-mark.png", shortcut: "/word-by-word-mark.png", apple: "/word-by-word-mark.png" },
     openGraph: { title, description, type: "website", images: [`${origin}/og.png`] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
   };
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="uk">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
