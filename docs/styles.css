@@ -83,11 +83,12 @@
 
     /* Словник: коротка добірка реальних локальних перекладів. */
     .vocabulary{overflow:hidden;border-top:1px solid var(--line);background:var(--canvas)}
-    .vocabulary-inner{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(470px,1.18fr);gap:clamp(44px,8vw,108px);align-items:center;max-width:1200px;margin:auto;padding:104px 24px}
-    .vocabulary-copy h2{max-width:510px;margin:14px 0 22px;font-size:clamp(40px,4.8vw,62px);line-height:1.03}
+    .vocabulary-inner{display:grid;grid-template-columns:1fr;gap:46px;max-width:1200px;margin:auto;padding:104px 24px}
+    .vocabulary-copy{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.75fr);gap:clamp(38px,7vw,104px);align-items:end}
+    .vocabulary-copy h2{max-width:570px;margin:14px 0 0;font-size:clamp(40px,4.8vw,62px);line-height:1.03}
     .vocabulary-copy h2 em{display:block}
-    .vocabulary-copy>p{max-width:450px;margin:0;color:#65666b;font-size:15px;line-height:1.72}
-    .vocabulary-note{display:grid;grid-template-columns:35px 1fr;gap:12px;align-items:start;max-width:450px;margin:29px 0 24px;padding:16px 17px;border-left:3px solid var(--coral);background:var(--soft)}
+    .vocabulary-context>p{max-width:450px;margin:0;color:#65666b;font-size:15px;line-height:1.72}
+    .vocabulary-note{display:grid;grid-template-columns:35px 1fr;gap:12px;align-items:start;max-width:450px;margin:24px 0;padding:16px 17px;border-left:3px solid var(--coral);background:var(--soft)}
     .vocabulary-note>span{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--coral);color:#fff;font:18px/1 Georgia,serif}
     .vocabulary-note p{margin:0;color:#5e5f65;font-size:12px;line-height:1.58}
     .vocabulary-note strong{color:var(--graphite)}
@@ -95,49 +96,11 @@
     .vocabulary-link span{font-size:19px;line-height:.8;transition:transform .2s ease}
     .vocabulary-link:hover span,.vocabulary-link:focus-visible span{transform:translateX(5px)}
     .vocabulary-link:focus-visible{outline:2px solid var(--forest);outline-offset:5px}
-    .vocabulary-board{position:relative;overflow:hidden;padding:0 27px 27px;background:var(--graphite);color:#fff;box-shadow:20px 20px 0 var(--forest)}
-    .vocabulary-board:before,.vocabulary-board:after{position:absolute;border:1px solid rgb(255 255 255 / 12%);border-radius:50%;content:"";pointer-events:none}
-    .vocabulary-board:before{right:-105px;bottom:-120px;width:300px;height:300px}
-    .vocabulary-board:after{right:38px;bottom:58px;width:130px;height:130px}
-    .vocabulary-board-head{position:relative;z-index:1;display:flex;justify-content:space-between;gap:20px;padding:22px 0 18px;border-bottom:1px solid rgb(255 255 255 / 18%);font-size:9px;font-weight:800;letter-spacing:1.35px}
-    .vocabulary-board-head span:last-child{color:#d4d5dc;text-align:right}
-    .vocabulary-list{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-right:1px solid rgb(255 255 255 / 16%);border-bottom:1px solid rgb(255 255 255 / 16%)}
-    .vocab-word,.vocabulary-featured{position:relative;min-height:92px;padding:17px 16px;border-top:1px solid rgb(255 255 255 / 16%);border-left:1px solid rgb(255 255 255 / 16%)}
-    .vocab-word{display:flex;flex-direction:column;justify-content:center;gap:6px;background:rgb(255 255 255 / 2%);transition:background .2s ease,transform .2s ease}
-    .vocab-word:hover{z-index:2;background:var(--forest);transform:translate(-3px,-3px)}
-    .vocab-word span{font:italic 18px/1.05 Georgia,serif}
-    .vocab-word b{color:#d8d8dc;font-size:11px;line-height:1.38}
-    .vocabulary-featured{grid-column:1/-1;min-height:136px;overflow:hidden;padding:20px 22px;background:var(--coral)}
-    .vocabulary-featured>span{display:block;font-size:9px;font-weight:800;letter-spacing:1.35px}
-    .vocabulary-featured strong,.vocabulary-featured b{position:relative;z-index:1;display:block}
-    .vocabulary-featured strong{margin-top:12px;font:32px/1 Georgia,serif}
-    .vocabulary-featured b{margin-top:5px;font-size:12px}
-    .vocabulary-featured i{position:absolute;right:25px;bottom:15px;color:rgb(255 255 255 / 55%);font:64px/1 Georgia,serif}
-    @media(max-width:900px){.vocabulary-inner{grid-template-columns:1fr;gap:44px;padding:84px 28px}.vocabulary-copy h2{max-width:720px}.vocabulary-copy>p,.vocabulary-note{max-width:760px}.vocabulary-board{max-width:760px;width:100%;box-shadow:14px 14px 0 var(--forest)}}
-    @media(max-width:560px){.vocabulary-inner{gap:36px;padding:72px 20px}.vocabulary-copy h2{font-size:42px;letter-spacing:-.6px}.vocabulary-note{grid-template-columns:31px 1fr;margin-top:24px;padding:14px}.vocabulary-board{padding:0 14px 14px;box-shadow:9px 9px 0 var(--forest)}.vocabulary-board-head{gap:10px;padding:18px 2px 15px;line-height:1.35}.vocabulary-list{grid-template-columns:repeat(2,minmax(0,1fr))}.vocab-word{min-height:84px;padding:13px 11px}.vocab-word span{font-size:17px}.vocab-word b{font-size:10px}.vocabulary-featured{min-height:124px;padding:18px}.vocabulary-featured strong{font-size:30px}.vocabulary-featured i{right:18px;font-size:56px}}
-
-.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;clip-path:inset(50%)}
-    .dictionary-quick{border-bottom:1px solid var(--line);background:#fff}
-    .dictionary-quick-inner{display:grid;grid-template-columns:minmax(185px,.78fr) minmax(320px,1.35fr) auto;align-items:center;gap:28px;max-width:1200px;margin:auto;padding:18px 24px}
-    .dictionary-quick-copy{display:flex;align-items:center;gap:13px}
-    .dictionary-quick-copy .kicker{white-space:nowrap}
-    .dictionary-quick-copy p{margin:0;color:#686970;font-size:11px;line-height:1.4}
-    .dictionary-quick-field{display:flex;min-width:0;border:1px solid var(--graphite);background:var(--canvas);transition:border-color .18s ease,box-shadow .18s ease}
-    .dictionary-quick-field:focus-within{border-color:var(--forest);box-shadow:0 0 0 3px rgb(77 129 105 / 15%)}
-    #dictionary-quick-search{width:100%;min-width:0;border:0;outline:0;background:transparent;padding:11px 13px;color:var(--graphite);font:16px Georgia,serif}
-    #dictionary-quick-search::placeholder{color:#929298;opacity:1}
-    .dictionary-quick-field button{display:flex;align-items:center;justify-content:center;gap:8px;flex:0 0 auto;border:0;background:var(--coral);padding:0 16px;color:#fff;font-size:11px;font-weight:800;transition:background .18s ease}
-    .dictionary-quick-field button:hover,.dictionary-quick-field button:focus-visible{background:var(--forest);outline:0}
-    .dictionary-quick-field button span{font-size:17px;line-height:1}
-    .dictionary-quick-link{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border-bottom:1px solid var(--coral);padding-bottom:3px;font-size:11px;font-weight:800}
-    .dictionary-quick-link span{color:var(--coral);font-size:15px;line-height:1;transition:transform .18s ease}
-    .dictionary-quick-link:hover span,.dictionary-quick-link:focus-visible span{transform:translateY(3px)}
-    .dictionary-quick-link:focus-visible{outline:2px solid var(--forest);outline-offset:5px}
-    @media(max-width:900px){.dictionary-quick-inner{grid-template-columns:1fr auto;gap:14px 24px;padding:17px 28px}.dictionary-quick-copy{grid-column:1/-1}.dictionary-quick-field{min-width:0}}
-    @media(max-width:560px){.dictionary-quick-inner{grid-template-columns:1fr;gap:12px;padding:17px 20px}.dictionary-quick-copy{align-items:flex-start;flex-direction:column;gap:5px}.dictionary-quick-copy p{font-size:11px}.dictionary-quick-field{width:100%}.dictionary-quick-link{justify-self:start}}
+    @media(max-width:900px){.vocabulary-inner{gap:38px;padding:84px 28px}.vocabulary-copy{grid-template-columns:1fr;gap:23px}.vocabulary-copy h2{max-width:720px}.vocabulary-context>p,.vocabulary-note{max-width:760px}}
+    @media(max-width:560px){.vocabulary-inner{gap:32px;padding:72px 20px}.vocabulary-copy{gap:20px}.vocabulary-copy h2{font-size:42px;letter-spacing:-.6px}.vocabulary-note{grid-template-columns:31px 1fr;margin-top:22px;padding:14px}}
 
 /* Повний словник: дані підставляються локально, без зовнішнього перекладача. */
-    .dictionary-browser{grid-column:1/-1;padding:34px;border:1px solid var(--line);background:#fff;box-shadow:0 18px 38px rgb(64 65 79 / 7%)}
+    .dictionary-browser{grid-column:auto;padding:34px;border:1px solid var(--line);background:#fff;box-shadow:0 18px 38px rgb(64 65 79 / 7%)}
     .dictionary-browser-head{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:27px}
     .dictionary-browser-head h3{margin-top:12px;font-size:clamp(29px,3vw,42px);line-height:1.05}
     .dictionary-local-note{display:flex;align-items:flex-start;gap:8px;max-width:330px;margin:0;color:#65666b;font-size:12px;line-height:1.5}
@@ -166,9 +129,7 @@
     @media(max-width:900px){.dictionary-browser{padding:28px}.dictionary-results{grid-template-columns:repeat(3,minmax(0,1fr))}.dictionary-browser-head{align-items:start;flex-direction:column;gap:14px}.dictionary-local-note{max-width:none}.dictionary-controls{align-items:flex-start;flex-direction:column}.dictionary-letters{justify-content:flex-start}}
     @media(max-width:560px){.dictionary-browser{padding:20px 14px}.dictionary-browser-head{margin-bottom:22px}.dictionary-browser-head h3{font-size:31px;letter-spacing:-.6px}.dictionary-search-wrap{padding:0 12px}.dictionary-search-wrap>span{font-size:22px}#dictionary-search{padding:14px 0;font-size:17px}.dictionary-controls{gap:13px;margin:16px 0 13px}.dictionary-controls>p{white-space:normal}.dictionary-letters{gap:4px}.dictionary-letter{min-width:26px;height:26px}.dictionary-results{grid-template-columns:repeat(2,minmax(0,1fr))}.dictionary-result{min-height:84px;padding:13px}.dictionary-en{font-size:18px}.dictionary-uk{font-size:10px}.dictionary-loading,.dictionary-empty{padding:25px 13px;font-size:15px}}
 
-    /* Повний словник продовжує темну карткову вітрину. */
-    #vocabulary-board-label{color:#f3d8c1}
-    .vocabulary-featured{transition:background .3s ease}
+        /* Повний словник продовжує темну карткову вітрину. */
     .dictionary-browser{position:relative;overflow:hidden;border:0;background:var(--graphite);color:#fff;box-shadow:20px 20px 0 var(--forest)}
     .dictionary-browser:before,.dictionary-browser:after{position:absolute;border:1px solid rgb(255 255 255 / 11%);border-radius:50%;content:"";pointer-events:none}
     .dictionary-browser:before{top:-180px;right:-110px;width:370px;height:370px}
