@@ -99,7 +99,7 @@
     @media(max-width:900px){.vocabulary-inner{gap:38px;padding:84px 28px}.vocabulary-copy{grid-template-columns:1fr;gap:23px}.vocabulary-copy h2{max-width:720px}.vocabulary-context>p,.vocabulary-note{max-width:760px}}
     @media(max-width:560px){.vocabulary-inner{gap:32px;padding:72px 20px}.vocabulary-copy{gap:20px}.vocabulary-copy h2{font-size:42px;letter-spacing:-.6px}.vocabulary-note{grid-template-columns:31px 1fr;margin-top:22px;padding:14px}}
 
-/* Повний словник: дані підставляються локально, без зовнішнього перекладача. */
+    /* Повний словник: дані підставляються локально, без зовнішнього перекладача. */
     .dictionary-browser{grid-column:auto;padding:34px;border:1px solid var(--line);background:#fff;box-shadow:0 18px 38px rgb(64 65 79 / 7%)}
     .dictionary-browser-head{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:27px}
     .dictionary-browser-head h3{margin-top:12px;font-size:clamp(29px,3vw,42px);line-height:1.05}
@@ -129,7 +129,33 @@
     @media(max-width:900px){.dictionary-browser{padding:28px}.dictionary-results{grid-template-columns:repeat(3,minmax(0,1fr))}.dictionary-browser-head{align-items:start;flex-direction:column;gap:14px}.dictionary-local-note{max-width:none}.dictionary-controls{align-items:flex-start;flex-direction:column}.dictionary-letters{justify-content:flex-start}}
     @media(max-width:560px){.dictionary-browser{padding:20px 14px}.dictionary-browser-head{margin-bottom:22px}.dictionary-browser-head h3{font-size:31px;letter-spacing:-.6px}.dictionary-search-wrap{padding:0 12px}.dictionary-search-wrap>span{font-size:22px}#dictionary-search{padding:14px 0;font-size:17px}.dictionary-controls{gap:13px;margin:16px 0 13px}.dictionary-controls>p{white-space:normal}.dictionary-letters{gap:4px}.dictionary-letter{min-width:26px;height:26px}.dictionary-results{grid-template-columns:repeat(2,minmax(0,1fr))}.dictionary-result{min-height:84px;padding:13px}.dictionary-en{font-size:18px}.dictionary-uk{font-size:10px}.dictionary-loading,.dictionary-empty{padding:25px 13px;font-size:15px}}
 
-        /* Повний словник продовжує темну карткову вітрину. */
+    /* Власна бібліотека: книжки лишаються тільки на цьому пристрої. */
+    .book-library-panel{display:grid;min-width:0;gap:14px}
+    .book-dropzone{width:100%;cursor:pointer;transition:border-color .2s ease,background .2s ease,transform .2s ease}
+    .book-dropzone i{margin:0;color:#d8d8dc;font-size:10px;font-style:normal;font-weight:800;letter-spacing:1.25px}
+    .book-dropzone:hover,.book-dropzone:focus-visible,.book-dropzone.is-dragging{border-color:var(--coral);background:rgb(77 129 105 / 28%);outline:0;transform:translateY(-3px)}
+    .book-dropzone:focus-visible{box-shadow:0 0 0 3px rgb(255 255 255 / 26%)}
+    .book-status{min-height:1.5em;margin:16px 0 0;color:#d8d8dc;font-size:12px;line-height:1.5}
+    .book-status[hidden]{display:none}.book-status[data-state="success"]{color:#f0c7a0}.book-status[data-state="error"]{color:#fff}.book-status[data-state="loading"]{color:#d8d8dc}
+    .my-books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .my-books-empty{grid-column:1/-1;margin:0;padding:2px 0;color:#d8d8dc;font:13px/1.55 Georgia,serif}
+    .my-book{position:relative;overflow:visible;background:#fff;color:var(--graphite)}
+    .my-book .cover{height:126px}.my-book .cover span{max-width:85%;font-size:16px}
+    .my-book .meta{padding:14px}.my-book .meta h3{font-size:17px}.my-book .book-note{margin:0 14px 14px}.my-book .open{padding:0 14px 14px}
+    .my-book-remove{position:absolute;top:9px;right:9px;z-index:3;width:auto!important;border:0!important;background:rgb(64 65 79 / 86%)!important;padding:6px 8px!important;color:#fff;font-size:9px!important;font-weight:800!important;line-height:1!important;text-align:center!important;transition:background .18s ease,transform .18s ease!important}
+    .my-book-remove:hover,.my-book-remove:focus-visible{background:var(--coral)!important;outline:0;transform:translateY(-1px)}
+
+    /* Навігація частинами для довгих книжок. */
+    .reader-foot{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;align-items:center;gap:10px;padding:14px 18px}
+    .reader-foot-copy{grid-column:2;display:flex;flex-wrap:wrap;justify-content:center;gap:9px;min-width:0;line-height:1.4}
+    #reader-prev{grid-column:1}.reader-nav#reader-next{grid-column:3}
+    .reader-nav{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--line);background:#fff;color:var(--graphite);font:20px/1 Georgia,serif;transition:border-color .18s ease,background .18s ease,color .18s ease}
+    .reader-nav:disabled{opacity:.34;cursor:default}.reader-nav:not(:disabled):hover,.reader-nav:not(:disabled):focus-visible{border-color:var(--forest);background:var(--forest);color:#fff;outline:0}
+    #reader-page{color:var(--forest);font-size:10px;font-weight:800;letter-spacing:1px}
+    @media(max-width:900px){.reader-foot{display:grid;padding:14px 10px}.reader-foot-copy{font-size:9px}.reader-nav{width:32px;height:32px}}
+    @media(max-width:560px){.my-books{grid-template-columns:1fr}.book-dropzone{min-height:228px}.reader-foot{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.reader-foot-copy{gap:6px;font-size:8px;letter-spacing:.72px}.reader-nav{width:30px;height:30px;font-size:18px}}
+
+    /* Повний словник продовжує темну карткову вітрину. */
     .dictionary-browser{position:relative;overflow:hidden;border:0;background:var(--graphite);color:#fff;box-shadow:20px 20px 0 var(--forest)}
     .dictionary-browser:before,.dictionary-browser:after{position:absolute;border:1px solid rgb(255 255 255 / 11%);border-radius:50%;content:"";pointer-events:none}
     .dictionary-browser:before{top:-180px;right:-110px;width:370px;height:370px}
