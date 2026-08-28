@@ -1,8 +1,11 @@
+import { cardGlossary } from "./card-glossary";
+
 /**
  * Перевірений словник для частих та неоднозначних навчальних слів.
  * Ключ містить напрямок перекладу, щоб значення не змішувалися.
  */
 export const glossary: Record<string, string> = {
+  ...cardGlossary,
   "en-uk:morning": "ранок",
   "en-uk:walk": "прогулянка; гуляти",
   "en-uk:quiet": "тихий, спокійний",
@@ -52,10 +55,15 @@ export const glossary: Record<string, string> = {
   "en-uk:word": "слово",
   "en-uk:translation": "переклад",
   "en-uk:crisp": "свіжий, бадьорий",
+  "en-uk:wake": "прокидатися; будити",
+  "en-uk:wakes": "прокидається; будить",
+  "en-uk:run": "бігти; працювати",
+  "en-uk:runs": "біжить; працює",
   "en-uk:neighbour": "сусід, сусідка",
   "en-uk:train": "потяг",
   "en-uk:sea": "море",
   "en-uk:coast": "узбережжя",
+  "en-uk:crossed": "перейшов, перейшла; перетнув, перетнула",
   "en-uk:window": "вікно",
   "en-uk:poem": "вірш",
   "en-uk:camera": "фотоапарат, камера",
