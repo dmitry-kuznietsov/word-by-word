@@ -26,7 +26,8 @@
     .ticker i{flex:0 0 auto;font-size:17px;line-height:1}
     .preview{padding-bottom:118px;animation:floatCard 6s ease-in-out infinite}
     .hero-word{position:relative;display:inline-block}.tip{top:calc(100% + 8px);right:auto;bottom:auto;left:0;width:220px;padding:12px 14px;font:12px/1.35 Arial,Helvetica,sans-serif;transform:rotate(1.5deg)}
-    .tip b{margin:3px 0;line-height:1.13}.hero-next{display:block;padding-top:92px}
+    .tip b{margin:3px 0;line-height:1.13}
+    .tip{background:rgb(255 255 255 / 68%)!important;backdrop-filter:blur(12px) saturate(1.12)}
     .visual:before{animation:orbitDrift 15s ease-in-out infinite}.visual:after{animation:orbitDrift 12s ease-in-out -4s infinite reverse}
     .book{overflow:hidden}.book:hover .cover:before{transform:scale(1.13)}.cover:before,.cover:after{transition:transform .45s ease}
     .book-note{display:-webkit-box;overflow:hidden;margin:0 16px 16px;color:#66676d;font:12px/1.58 Georgia,serif;-webkit-box-orient:vertical;-webkit-line-clamp:4}
@@ -43,13 +44,14 @@
     @media(min-width:561px) and (max-width:900px){.hero-copy,.reader-copy,.books-copy{width:100%;max-width:none}.hero-copy p,.reader-copy p,.books-copy p,.heading p{max-width:none}.hero-copy h1 br,.heading h2 br,.reader-copy h2 br,.books-copy h2 br{display:none}}
     @media(max-width:900px){h1,h2{letter-spacing:-.6px}}
     .hero-next{padding-top:0}
+    @media(max-width:560px){.tip{backdrop-filter:blur(12px) saturate(1.12)}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
   <header class="header"><a class="brand" href="#top"><img src="word-by-word-mark.png" alt=""><span>Word by Word</span></a><nav class="nav" aria-label="Основна навігація"><a href="#library">Тексти</a><a href="#reader">Рідер</a><a href="#books">Книжки</a></nav><button class="menu-toggle" id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span>Меню</span><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button><nav class="mobile-nav" id="mobile-menu" aria-label="Мобільна навігація" hidden><a href="#library">Тексти</a><a href="#reader">Рідер</a><a href="#books">Книжки</a></nav></header>
   <main id="top">
-    <section class="hero"><div class="hero-copy"><div class="eyebrow kicker">ЧИТАЙТЕ · РОЗУМІЙТЕ · ЗАПАМ’ЯТОВУЙТЕ</div><h1>Англійська,<br>яка читається<br><em>як улюблена книжка.</em></h1><p>24 історії від A1 до B2, довші тексти та переклад будь-якого слова просто під час читання.</p><a class="button" href="#library">Обрати текст&nbsp; →</a></div><div class="visual"><div class="preview"><small>ІНТЕРАКТИВНИЙ РІДЕР</small><h2>The Path<br>Through the Pines</h2><p>The morning air felt <span class="hero-word"><mark>crisp</mark><span class="tip"><small>ПЕРЕКЛАД СЛОВА</small><b>свіжий, бадьорий</b><span>Картка з’являється поряд зі словом.</span></span></span> and clear.<span class="hero-next">A soft wind moved through the pines.</span></p></div></div></section>
+    <section class="hero"><div class="hero-copy"><div class="eyebrow kicker">ЧИТАЙТЕ · РОЗУМІЙТЕ · ЗАПАМ’ЯТОВУЙТЕ</div><h1>Англійська,<br>яка читається<br><em>як улюблена книжка.</em></h1><p>24 історії від A1 до B2, довші тексти та переклад будь-якого слова просто під час читання.</p><a class="button" href="#library">Обрати текст&nbsp; →</a></div><div class="visual"><div class="preview"><small>ІНТЕРАКТИВНИЙ РІДЕР</small><h2>The Path<br>Through the Pines</h2><p>The morning air felt <span class="hero-word"><mark>crisp</mark><span class="tip"><small>ПЕРЕКЛАД СЛОВА</small><b>свіжий, бадьорий</b><span>Картка з’являється поряд зі словом.</span></span></span> and clear. A soft wind moved through the pines.</p></div></div></section>
     <div class="ticker"><span>АНГЛІЙСЬКА ↔ УКРАЇНСЬКА</span><i>✦</i><span>ПЕРЕКЛАД В ОДИН КЛІК</span><i>✦</i><span>24 ТЕКСТИ A1–B2</span></div>
     <section class="section"><div class="heading"><div><span class="kicker">ЯК ЦЕ ПРАЦЮЄ</span><h2>Читайте без<br>втрати сенсу</h2></div><p>Слово підсвічується лише при наведенні. Переклад з’являється поряд і не закриває текст.</p></div><div class="steps"><article class="step"><span class="num">01</span><div class="icon">Aa</div><h3>Оберіть рівень</h3><p>У бібліотеці доступні 24 оригінальні історії з об’ємнішими текстами.</p></article><article class="step"><span class="num">02</span><div class="icon">↖</div><h3>Натисніть на слово</h3><p>Будь-яке слово стане зеленим при наведенні й покаже переклад за кліком.</p></article><article class="step"><span class="num">03</span><div class="icon">✓</div><h3>Продовжуйте читати</h3><p>Подвійний клік закриває переклад — без зайвих вікон і дій.</p></article></div></section>
     <section class="library"><div class="section" id="library"><div class="heading"><div><span class="kicker">БІБЛІОТЕКА</span><h2>Оберіть рівень<br>і почніть читати</h2></div><p>24 оригінальні історії від A1 до B2. У кожній — кілька повноцінних абзаців для спокійного читання.</p></div><div class="book-grid" id="book-grid"></div></div></section>
