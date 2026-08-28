@@ -78,3 +78,15 @@
 @media(max-width:600px) {
   .definition { left:16px!important; right:16px!important; top:auto!important; bottom:16px!important; width:auto; }
 }
+
+/* Читалка: заголовок перед текстом, широкая рабочая область. */
+.reader-section{display:block;padding-top:108px;padding-bottom:108px}
+.reader-info{width:min(100%,1180px);margin:0 auto 34px}
+.reader-info h2{margin:13px 0 15px}
+.reader-info h2 br{display:none}
+.reader-info>p{max-width:790px;margin:0 0 22px}
+.reader-demo{width:min(100%,1180px);margin:0 auto}
+.reader-text{padding:55px clamp(30px,7vw,116px) 68px}
+.reader-text > :not(.definition){max-width:960px}
+@media(max-width:900px){.reader-section{padding-top:84px;padding-bottom:84px}.reader-info{margin-bottom:26px}.reader-info>p{max-width:none}}
+@media(max-width:600px){.reader-section{padding-top:72px;padding-bottom:72px}.reader-info{margin-bottom:22px}.reader-text{padding:40px 24px 100px}.reader-text > :not(.definition){max-width:none}}
