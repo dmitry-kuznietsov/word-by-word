@@ -156,27 +156,27 @@
     @media(max-width:900px){.reader-foot{display:grid;padding:14px 10px}.reader-foot-copy{font-size:9px}.reader-nav{width:32px;height:32px}}
     @media(max-width:560px){.my-books{grid-template-columns:1fr}.book-dropzone{min-height:228px}.reader-foot{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.reader-foot-copy{gap:6px;font-size:8px;letter-spacing:.72px}.reader-nav{width:30px;height:30px;font-size:18px}}
 
-    /* Повний словник продовжує темну карткову вітрину. */
-    .dictionary-browser{position:relative;overflow:hidden;border:0;background:var(--graphite);color:#fff;box-shadow:20px 20px 0 var(--forest)}
-    .dictionary-browser:before,.dictionary-browser:after{position:absolute;border:1px solid rgb(255 255 255 / 11%);border-radius:50%;content:"";pointer-events:none}
+    /* Повний словник: світла карткова вітрина. */
+    .dictionary-browser{position:relative;overflow:hidden;border:1px solid var(--line);background:#fff;color:var(--graphite);box-shadow:20px 20px 0 var(--soft)}
+    .dictionary-browser:before,.dictionary-browser:after{position:absolute;border:1px solid rgb(64 65 79 / 8%);border-radius:50%;content:"";pointer-events:none}
     .dictionary-browser:before{top:-180px;right:-110px;width:370px;height:370px}
     .dictionary-browser:after{right:92px;bottom:-118px;width:230px;height:230px}
     .dictionary-browser>*{position:relative;z-index:1}
-    .dictionary-browser-head h3{color:#fff}
-    .dictionary-local-note{color:#d8d8dc}.dictionary-local-note span{background:var(--coral)}
-    .dictionary-search-label{color:#d8d8dc}
-    .dictionary-search-wrap{border-color:rgb(255 255 255 / 31%);background:rgb(255 255 255 / 5%)}
-    .dictionary-search-wrap:focus-within{border-color:#fff;box-shadow:0 0 0 3px rgb(255 255 255 / 14%)}
-    .dictionary-search-wrap>span{color:#f3d8c1}
-    #dictionary-search{color:#fff}#dictionary-search::placeholder{color:#bfc0c7}
-    .dictionary-controls>p{color:#d8d8dc}.dictionary-controls>p strong{color:#fff}
-    .dictionary-letter{border-color:rgb(255 255 255 / 21%);background:transparent;color:#e7e7eb}
-    .dictionary-letter:hover,.dictionary-letter:focus-visible,.dictionary-letter.is-active{border-color:var(--coral);background:var(--coral);color:#fff}
-    .dictionary-results{border-color:rgb(255 255 255 / 16%)}
-    .dictionary-result{border-color:rgb(255 255 255 / 16%);background:rgb(255 255 255 / 2%);color:#fff}
-    .dictionary-result:hover{z-index:2;background:var(--forest);box-shadow:inset 0 -3px 0 var(--coral);transform:translate(-3px,-3px)}
-    .dictionary-en{color:#fff}.dictionary-uk{color:#d8d8dc}
-    .dictionary-loading,.dictionary-empty{background:rgb(255 255 255 / 4%);color:#d8d8dc}
-    .dictionary-more{background:var(--coral)}.dictionary-more:hover,.dictionary-more:focus-visible{background:#fff;color:var(--graphite)}
-    @media(max-width:900px){.dictionary-browser{box-shadow:14px 14px 0 var(--forest)}}
-    @media(max-width:560px){.dictionary-browser{box-shadow:9px 9px 0 var(--forest)}}
+    .dictionary-browser-head h3{color:var(--graphite)}
+    .dictionary-local-note{color:#65666b}.dictionary-local-note span{background:var(--forest)}
+    .dictionary-search-label{color:var(--graphite)}
+    .dictionary-search-wrap{border-color:var(--graphite);background:var(--canvas)}
+    .dictionary-search-wrap:focus-within{border-color:var(--forest);box-shadow:0 0 0 3px rgb(77 129 105 / 16%)}
+    .dictionary-search-wrap>span{color:var(--coral)}
+    #dictionary-search{color:var(--graphite)}#dictionary-search::placeholder{color:#98989c}
+    .dictionary-controls>p{color:#6c6d73}.dictionary-controls>p strong{color:var(--graphite)}
+    .dictionary-letter{border-color:var(--line);background:#fff;color:#696a70}
+    .dictionary-letter:hover,.dictionary-letter:focus-visible,.dictionary-letter.is-active{border-color:var(--forest);background:var(--forest);color:#fff}
+    .dictionary-results{border-color:var(--line)}
+    .dictionary-result{border-color:var(--line);background:#fff;color:var(--graphite)}
+    .dictionary-result:hover{z-index:2;background:var(--soft);box-shadow:inset 0 -3px 0 var(--coral);transform:translate(-3px,-3px)}
+    .dictionary-en{color:var(--graphite)}.dictionary-uk{color:#62636a}
+    .dictionary-loading,.dictionary-empty{background:var(--canvas);color:#6b6c72}
+    .dictionary-more{background:var(--coral)}.dictionary-more:hover,.dictionary-more:focus-visible{background:var(--forest);color:#fff}
+    @media(max-width:900px){.dictionary-browser{box-shadow:14px 14px 0 var(--soft)}}
+    @media(max-width:560px){.dictionary-browser{box-shadow:9px 9px 0 var(--soft)}}
